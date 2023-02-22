@@ -23,5 +23,11 @@ class Solution:
         for i,j in d.items():
             if j>n2:
                 return i
+            
+            
+            
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        return sorted(nums)[len(nums)//2]
 
             
