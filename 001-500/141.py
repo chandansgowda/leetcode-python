@@ -6,6 +6,22 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
+        try:
+            s = head
+            f = s.next
+
+            while s is not f:
+                s = s.next
+                f = f.next.next
+
+            return True
+        except:
+            return False
+
+        
+        
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
         if not head or not head.next: 
             return False
         s = head
