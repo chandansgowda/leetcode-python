@@ -19,3 +19,27 @@ class Solution:
         p1.next = None
         return head.next
         
+
+
+class Solution:
+    def mergeNodes(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        temp = head
+        res = []
+        while temp:
+            c = 0
+            while temp.val!=0:
+                c += temp.val
+                temp = temp.next
+            if c!=0:
+                res.append(c)
+            temp = temp.next
+        
+        z = ListNode(res[0])
+        x = z
+        for i in res[1:]:
+            x.next = ListNode()
+            x = x.next
+            x.val = i
+            
+
+        return z
