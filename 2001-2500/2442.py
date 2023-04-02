@@ -11,3 +11,11 @@ class Solution:
             s.add(reverseInteger(n))
         return len(s)
             
+
+class Solution:
+    def countDistinctIntegers(self, nums: List[int]) -> int:
+        s = set(nums)
+        for n in nums:
+            s.add(int(str(n)[::-1]))
+        return len(s)
+            
