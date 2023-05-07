@@ -1,5 +1,15 @@
 class Solution:
     def numberOfPairs(self, nums: List[int]) -> List[int]:
+        counter=collections.Counter(nums)
+        ans1=ans2=0
+        for k,v in counter.items():
+            ans1+=v//2
+            ans2+=v%2
+        return [ans1, ans2]
+
+
+class Solution:
+    def numberOfPairs(self, nums: List[int]) -> List[int]:
         d = {}
         ans = [0,0]
         for num in nums:
