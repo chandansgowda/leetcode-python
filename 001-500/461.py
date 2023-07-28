@@ -7,3 +7,8 @@ class Solution:
                 hd += 1
             z = z>>1
         return hd
+        
+
+class Solution:
+    def hammingDistance(self, x: int, y: int) -> int:
+        return bin(x^y).count('1')
