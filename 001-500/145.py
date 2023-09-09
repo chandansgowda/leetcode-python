@@ -15,4 +15,9 @@ class Solution:
         self.postorderTraversal(root.right)
         self.ans.append(root.val)
         return self.ans
+
+
+class Solution:
+    def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        return self.postorderTraversal(root.left)+self.postorderTraversal(root.right)+[root.val] if root else []
         
