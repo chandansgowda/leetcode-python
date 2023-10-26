@@ -14,3 +14,16 @@ class Solution:
         
         dp = [[-1]*m for _ in range(n)]
         return helper(n-1,m-1,dp)
+
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        def helper(i,j):
+            if i==0 and j==0:
+                return 1
+            elif i<0 or j<0:
+                return 0
+            l = helper(i-1,j)
+            r = helper(i,j-1)
+            return l+r
+        
+        return helper(n-1,m-1)
