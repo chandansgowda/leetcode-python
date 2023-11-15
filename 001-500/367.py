@@ -10,3 +10,9 @@ class Solution:
             else:
                 right = mid - 1
         return False
+
+
+
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        return (int(num**0.5) * int(num**0.5)) == num
